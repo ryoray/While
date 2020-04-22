@@ -32,7 +32,22 @@ public class Main {
         }while (count != 6);
 
         System.out.println("--------------------------------");
-        System.out.println(isEvenNumber(4));
+        int number = 4;
+        int finishNumber = 20;
+        count = 0;
+        int sum = 0;
+        while (number <= finishNumber) {
+            number++;
+            if (!isEvenNumber(number)){
+                continue;
+            }
+            count++;
+            if (count <= 5){
+                sum += number;
+                System.out.println("Even number : " + number);
+            }
+        }
+        System.out.println("Total of " + count + " numbers above is " + sum);
     }
 
     public static boolean isEvenNumber(int number) {
