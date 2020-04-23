@@ -41,13 +41,16 @@ public class Main {
             if (!isEvenNumber(number)){
                 continue;
             }
+            System.out.println("Even number : " + number);
+
             count++;
-            if (count <= 5){
-                sum += number;
-                System.out.println("Even number : " + number);
+            sum += number;
+
+            if (count >= 5) {
+                break;
             }
         }
-        System.out.println("Total of " + count + " numbers above is " + sum);
+        System.out.println("Total of "+ count +" numbers above is " + sum);
     }
 
     public static boolean isEvenNumber(int number) {
